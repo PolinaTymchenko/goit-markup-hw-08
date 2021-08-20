@@ -1,0 +1,91 @@
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    max-width: 370px;
+    border: 1px solid #eeeeee;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__description {
+    padding: 20px 24px;
+  }
+
+  &__name {
+    color: $title-color;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+  }
+
+  &__text {
+    color: $text-color;
+
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  &__item:not(:nth-child(3n + 3)) {
+    margin-right: 30px;
+  }
+
+  &__item:nth-child(7),
+  &__item:nth-child(8),
+  &__item:nth-child(9) {
+    margin-bottom: 0;
+  }
+
+  &__item:hover,
+  &__item:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* ОВЕРЛЕЙ АНИМАЦИЯ */
+
+.card-overlay {
+  position: relative;
+  overflow: hidden;
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 63px 24px;
+
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translatey(295px);
+    transition: transform 250ms $animation-function;
+  }
+
+  &__about {
+    color: $white;
+
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+  }
+  .card-list__item:hover &__wrapper,
+  .card-list__item:focus &__wrapper {
+    transform: translatey(0);
+  }
+}

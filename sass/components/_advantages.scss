@@ -1,0 +1,55 @@
+.advantages {
+  background-color: $white;
+
+  padding-top: 94px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: 270px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__icon-container {
+    background-color: $grey-color;
+
+    border-radius: 4px;
+
+    padding: 25px 100px;
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__points {
+    color: $title-color;
+
+    margin-top: 30px;
+
+    font-weight: bold;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    margin-top: 10px;
+  }
+}
+
+.hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}

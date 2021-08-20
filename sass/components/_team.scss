@@ -1,0 +1,76 @@
+.team {
+  background-color: $grey-color;
+
+  &__list {
+    display: flex;
+    margin-top: 50px;
+  }
+}
+
+.worker {
+  background-color: $white;
+  border-radius: 0 0 4px 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__description {
+    padding: 30px 32px;
+  }
+
+  &__name {
+    color: $title-color;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+  }
+
+  &__busyness {
+    line-height: 19px;
+    text-align: center;
+  }
+}
+
+/* СПИСОК СОЦСЕТЕЙ */
+
+.worker-network {
+  display: flex;
+  margin-top: 16px;
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    background-color: transparent;
+    transition: background-color 250ms $animation-function;
+  }
+
+  &__icon {
+    fill: $grey-icon;
+
+    width: 20px;
+    height: 20px;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent;
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $white;
+  }
+}
