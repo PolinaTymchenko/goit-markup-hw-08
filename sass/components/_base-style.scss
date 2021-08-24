@@ -36,14 +36,27 @@ img {
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
   padding: 0 15px;
   margin: 0 auto;
+
+  @media screen and (min-width: $-bp-tablet) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: $-bp-desktop) {
+    max-width: 1200px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $-bp-desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /* КО ВСЕМ Н2 */
