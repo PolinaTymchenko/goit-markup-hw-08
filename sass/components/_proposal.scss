@@ -1,4 +1,8 @@
 .proposal {
+  @media screen and (max-width: $-bp-desktop) {
+    display: none;
+  }
+
   background-color: $white;
 
   &__list {

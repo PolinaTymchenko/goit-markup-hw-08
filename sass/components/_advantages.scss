@@ -1,26 +1,54 @@
 .advantages {
   background-color: $white;
 
-  padding-top: 94px;
+  padding-top: 60px;
+
+  @media screen and (min-width: $-bp-desktop) {
+    padding-top: 94px;
+  }
 
   &__list {
     display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $-bp-tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
-    width: 270px;
+    max-width: 450px;
+
+    @media screen and (min-width: $-bp-tablet) {
+      max-width: 354px;
+    }
+
+    @media screen and (min-width: $-bp-desktop) {
+      max-width: 270px;
+    }
   }
 
   &__item:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $-bp-desktop) {
+      margin-right: 30px;
+    }
+  }
+
+  &__item:not(:nth-child(2n)) {
+    @media screen and (min-width: $-bp-tablet) {
+      margin-right: 30px;
+    }
   }
 
   &__icon-container {
     background-color: $grey-color;
-
     border-radius: 4px;
+    text-align: center;
 
-    padding: 25px 100px;
+    padding: 25px 0;
   }
 
   &__icon {
@@ -29,6 +57,9 @@
   }
 
   &__points {
+    @media screen and (max-width: $-bp-tablet) {
+      text-align: center;
+    }
     color: $title-color;
 
     margin-top: 30px;
