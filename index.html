@@ -172,14 +172,21 @@
                 <ul class="team__list list">
 
                     <li class="worker">
-                        <img srcset="./images/worker-mobile1.jpg 1x,
-                        ./images/worker-mobile1@2x.jpg 2x,
+                        <picture>
+                            <source srcset="
+                            ./images/worker-mobile1.jpg 1x,
+                            ./images/worker-mobile1@2x.jpg 2x" media="(max-width: 767px)" type="image/jpeg"/>
 
-                        ./images/worker-tablet1.jpg 1x,
-                        ./images/worker-tablet1@2x.jpg 2x,
+                            <source srcset=" ./images/worker1.jpg 1x,
+                            ./images/worker1@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpeg"/>
 
-                        ./images/worker1.jpg 1x,
-                        ./images/worker1@2x.jpg 2x," src="images/worker1.jpg" width="270" height="260" alt="Игорь Демьяненко">
+                            <source srcset=" ./images/worker-tablet1.jpg 1x,
+                            ./images/worker-tablet1@2x.jpg 2x
+                            " media="(min-width: 768px)" type="image/jpeg"/>
+
+                            <img src="images/worker1.jpg" alt="Игорь Демьяненко">
+
+                        </picture>
                         <div class="worker__description">
                             <h4 class="worker__name">Игорь Демьяненко</h4>
                             <p class="worker__busyness">Product Designer</p>
@@ -226,14 +233,22 @@
                     </li>
 
                     <li class="worker">
-                        <img srcset="./images/worker-mobile2.jpg 1x,
-                        ./images/worker-mobile2@2x.jpg 2x,
+                        <picture>
+                            <source srcset="
+                            ./images/worker-mobile2.jpg 1x,
+                            ./images/worker-mobile2@2x.jpg 2x" media="(max-width: 767px)" type="image/jpeg"/>
 
-                        ./images/worker-tablet2.jpg 1x,
-                        ./images/worker-tablet2@2x.jpg 2x,
+                            <source srcset=" ./images/worker2.jpg 1x,
+                            ../images/worker2@2x.jpg 2x
+                            " media="(min-width: 1200px)" type="image/jpeg"/>
 
-                        ./images/worker2.jpg 1x,
-                        ./images/worker2@2x.jpg 2x," src="images/worker2.jpg" width="270" height="260" alt="Ольга Репина">
+                            <source srcset=" ./images/worker-tablet2.jpg 1x,
+                            ./images/worker-tablet2@2x.jpg 2x
+                            " media="(min-width: 768px)" type="image/jpeg"/>
+
+                            <img src="images/worker2.jpg" alt="Ольга Репина">
+
+                        </picture>
                         <div class="worker__description">
                             <h4 class="worker__name">Ольга Репина</h4>
                             <p class="worker__busyness">Frontend Developer</p>
@@ -280,14 +295,22 @@
                     </li>
 
                     <li class="worker">
-                        <img srcset="./images/worker-mobile3.jpg 1x,
-                        ./images/worker-mobile3@2x.jpg 2x,
+                        <picture>
+                            <source srcset="
+                            ./images/worker-mobile3.jpg 1x,
+                            ./images/worker-mobile3@2x.jpg 2x" media="(max-width: 767px)" type="image/jpeg"/>
 
-                        ./images/worker-tablet3.jpg 1x,
-                        ./images/worker-tablet3@2x.jpg 2x,
+                            <source srcset=" ./images/worker3.jpg 1x,
+                            ./images/worker3@2x.jpg 2x
+                            " media="(min-width: 1200px)" type="image/jpeg"/>
 
-                        ./images/worker3.jpg 1x,
-                        ./images/worker3@2x.jpg 2x," src="images/worker3.jpg" width="270" height="260" alt="Николай Тарасов">
+                            <source srcset=" ./images/worker-tablet3.jpg 1x,
+                            ./images/worker-tablet3@2x.jpg 2x
+                            " media="(min-width: 768px)" type="image/jpeg"/>
+
+                            <img src="images/worker3.jpg" alt="Николай Тарасов">
+
+                        </picture> 
                         <div class="worker__description">
                             <h4 class="worker__name">Николай Тарасов</h4>
                             <p class="worker__busyness">Marketing</p>
@@ -333,14 +356,22 @@
                     </li>
 
                     <li class="worker">
-                        <img srcset="./images/worker-mobile4.jpg 1x,
-                        ./images/worker-mobile4@2x.jpg 2x,
+                        <picture>
+                            <source srcset="
+                            ./images/worker-mobile4.jpg 1x,
+                            ./images/worker-mobile4@2x.jpg 2x" media="(max-width: 767px)" type="image/jpeg"/>
 
-                        ./images/worker-tablet4.jpg 1x,
-                        ./images/worker-tablet4@2x.jpg 2x,
+                            <source srcset="./images/worker4.jpg 1x,
+                            ./images/worker4@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpeg"/>
 
-                        ./images/worker4.jpg 1x,
-                        ./images/worker4@2x.jpg 2x," src="images/worker4.jpg" width="270" height="260" alt="Михаил Ермаков">
+                            <source srcset=" 
+                            ./images/worker-tablet4.jpg 1x,
+                            ./images/worker-tablet4@2x.jpg 2x
+                            " media="(min-width: 768px)" type="image/jpeg"/>
+
+                            <img src="images/worker4.jpg" alt="Михаил Ермаков">
+
+                        </picture> 
                         <div class="worker__description">
                             <h4 class="worker__name">Михаил Ермаков</h4>
                             <p class="worker__busyness">UI Designer</p>

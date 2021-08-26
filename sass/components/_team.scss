@@ -17,6 +17,7 @@
 
     @media screen and (min-width: $-bp-desktop) {
       margin-top: 50px;
+      flex-wrap: nowrap;
     }
   }
 }
