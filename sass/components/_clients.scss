@@ -1,15 +1,18 @@
 .clients {
   &__list {
     display: flex;
-    margin-top: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    @media screen and (min-width: $-bp-desktop) {
+      margin-top: 50px;
+    }
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 170px;
     height: 92px;
 
     color: #afb1b8;
@@ -20,8 +23,45 @@
     transition: border 250ms $animation-function;
   }
 
-  &__item:not(:last-child) {
+  &__item {
     margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      margin-bottom: 0;
+    }
+
+    width: calc((100% - 30px) / 2);
+
+    @media screen and (min-width: $-bp-tablet) {
+      &:nth-child(2n) {
+        margin-right: 30px;
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      &:nth-child(4) {
+        margin-bottom: 0;
+      }
+      width: calc((100% - 30px * 2) / 3);
+    }
+
+    @media screen and (min-width: $-bp-desktop) {
+      width: calc((100% - 30px * 5) / 6);
+      &:nth-child(3n) {
+        margin-right: 30px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 
   &__icon {

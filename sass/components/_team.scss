@@ -3,7 +3,21 @@
 
   &__list {
     display: flex;
-    margin-top: 50px;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (max-width: $-bp-tablet) {
+      margin-top: 30px;
+    }
+
+    @media screen and (min-width: $-bp-tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: $-bp-desktop) {
+      margin-top: 50px;
+    }
   }
 }
 
@@ -12,12 +26,36 @@
   border-radius: 0 0 4px 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-top: 30px;
+
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: $-bp-desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   &__description {
-    padding: 30px 32px;
+    padding: 30px 0 24px;
+
+    @media screen and (min-width: $-bp-tablet) {
+      padding: 30px 0 24px;
+    }
+
+    @media screen and (min-width: $-bp-desktop) {
+      padding: 30px 32px;
+    }
   }
 
   &__name {
@@ -40,6 +78,7 @@
 .worker-network {
   display: flex;
   margin-top: 16px;
+  justify-content: center;
   &__item:not(:last-child) {
     margin-right: 10px;
   }

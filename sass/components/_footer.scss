@@ -1,4 +1,8 @@
 .footer {
+  background-color: $brand-color;
+
+  padding: 60px 0;
+
   &__title {
     color: $white;
 
@@ -6,13 +10,24 @@
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
-    padding-top: 12px;
-  }
-  background-color: $brand-color;
+    padding-top: 60px;
 
-  padding: 60px 0;
+    @media screen and (min-width: $-bp-tablet) {
+      padding-top: 5px;
+    }
+
+    @media screen and (min-width: $-bp-desktop) {
+      padding-top: 12px;
+    }
+  }
+
   &__container {
-    display: flex;
+    margin: 0 auto;
+
+    @media screen and (min-width: $-bp-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__logo {
@@ -31,9 +46,23 @@
 /* АДРЕСС КОМПАНИИ */
 
 .address {
+  @media screen and (min-width: $-bp-tablet) and (max-width: $-bp-desktop) {
+    width: 50%;
+  }
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $-bp-desktop) {
+    margin-right: 70px;
+  }
+
   &__list {
     margin-top: 20px;
-    margin-right: 70px;
+
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
   }
 
   &__link--colored {
@@ -59,10 +88,28 @@
 /* СОЦСЕТИ КОМПАНИИ */
 
 .company-network {
-  margin-right: 93px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: $-bp-tablet) {
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $-bp-tablet) and (max-width: $-bp-desktop) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: $-bp-desktop) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $-bp-desktop) {
+    margin-right: 93px;
+  }
   &__list {
     display: flex;
     margin-top: 30px;
+    align-self: center;
   }
 
   &__link {
@@ -102,16 +149,27 @@
 /* ФОРМА ФУТЕРА */
 
 .subscribe {
+  @media screen and (min-width: $-bp-tablet) and (max-width: $-bp-desktop) {
+    margin: 55px auto 0;
+  }
+
+  @media screen and (max-width: $-bp-desktop) {
+    text-align: center;
+  }
   &__form {
     margin-top: 20px;
   }
 
   &__container {
     display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $-bp-desktop) {
+      flex-direction: row;
+    }
   }
 
   &__input {
-    width: 358px;
     height: 50px;
     padding: 15px 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -122,6 +180,14 @@
 
     background-color: $brand-color;
     color: rgba(255, 255, 255, 0.6);
+
+    @media screen and (min-width: $-bp-tablet) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: $-bp-desktop) {
+      width: 358px;
+    }
   }
 
   &__button {
@@ -141,6 +207,10 @@
 
     background-color: $accent;
     color: $white;
+
+    @media screen and (max-width: $-bp-desktop) {
+      margin: 20px auto 0;
+    }
   }
 
   &__icon {
