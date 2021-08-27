@@ -26,8 +26,9 @@
 
   padding: 40px;
   max-width: 528px;
-  border-radius: 4px;
+  min-width: 320px;
 
+  border-radius: 4px;
   background-color: $white;
 
   transform: translate(-50%, -50%);
